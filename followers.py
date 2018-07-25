@@ -1,5 +1,5 @@
 """
-http://stackoverflow.com/questions/31000178/how-to-get-large-list-of-followers-tweepy
+Inspired by the original http://stackoverflow.com/questions/31000178/how-to-get-large-list-of-followers-tweepy
 ask user for account name to harvest follower names from.
 print follower names to screen
 pause  users to screen
@@ -10,14 +10,15 @@ import csv
 import sys
 
 
-#accountvar = "realDonaldTrump"
+
 accountvar = "Broadwit"
 #todo: upgrade this to read usernames from a file.
 print ("searching for followers of "+accountvar)
-consumer_key = "PnumhYhEPT5y0CVOrDDq3kupw"
-consumer_secret =  "tgN2Iy5LlcjShm2XZFXR4qIrBZXGnbwTSpovVuEo5LIvTSF8ce"
-access_token = "136659507-s4YULiqbm4AYntO19i72pSoj8ZNGDazjjjST51q9"
-access_token_secret = "9fqW1lJ6tTtUs5i3aJysQeLjxvF74RkFctCsWCgmYQxzA"
+#Put your own token here
+consumer_key = "Consumer_Key"
+consumer_secret =  "Consumer_Secret"
+access_token = "Access_Token"
+access_token_secret = "Access_Token_Secret"
 """
 consumer_key = "Your consumer key goes here"
 consumer_secret = "Your consumer secret goes here"
@@ -48,7 +49,7 @@ while True:
         #if (count>10):
         #    break
     except tweepy.TweepError:
-        #catches TweepError when rate limiting occurs, sleeps, then restarts.
+        #catches TweepError when rate limiting occurs according to API, sleeps, then restarts.
         #nominally 15 minnutes, make a bit longer to avoid attention.
         print ("sleeping....")
         time.sleep(60*16)
